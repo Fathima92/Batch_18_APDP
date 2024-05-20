@@ -34,7 +34,7 @@ class EnglishLocalizer:
 	def localize(self, msg):
 		return msg
 
-def Factory(language ="English"):
+def Factory(language ="French"):
 
 	"""Factory Method"""
 	localizers = {
