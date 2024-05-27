@@ -1,15 +1,15 @@
-class Button(object):
+class IButton(object):
    html = ""
    def get_html(self):
       return self.html
 
-class Image(Button):
+class Image(IButton):
    html = "<img></img>"
 
-class Input(Button):
+class Input(IButton):
    html = "<input></input>"
 
-class Flash(Button):
+class Flash(IButton):
    html = "<obj></obj>"
 
 class ButtonFactory():
