@@ -1,10 +1,13 @@
+# Adaptee
 class Mp3Player:
     def play_mp3(self, filename):
         print(f"Playing MP3 file: {filename}")
-
+#Target
 class MediaPlayer:
     def play(self, audio_type, filename):
         raise NotImplementedError("This method should be overridden.")
+
+# Adapter
 class MediaAdapter(MediaPlayer):
     def __init__(self, audio_type):
         if audio_type == "mp4":
@@ -25,7 +28,7 @@ class Mp4Player:
 class VlcPlayer:
     def play_vlc(self, filename):
         print(f"Playing VLC file: {filename}")
-
+#Client Code 
 class AudioPlayer(MediaPlayer):
     def play(self, audio_type, filename):
         if audio_type == "mp3":
