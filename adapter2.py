@@ -2,6 +2,15 @@
 class Mp3Player:
     def play_mp3(self, filename):
         print(f"Playing MP3 file: {filename}")
+
+class Mp4Player:
+    def play_mp4(self, filename):
+        print(f"Playing MP4 file: {filename}")
+
+class VlcPlayer:
+    def play_vlc(self, filename):
+        print(f"Playing VLC file: {filename}")
+    
 #Target
 class MediaPlayer:
     def play(self, audio_type, filename):
@@ -21,13 +30,7 @@ class MediaAdapter(MediaPlayer):
         elif audio_type == "vlc":
             self.advanced_player.play_vlc(filename)
 
-class Mp4Player:
-    def play_mp4(self, filename):
-        print(f"Playing MP4 file: {filename}")
 
-class VlcPlayer:
-    def play_vlc(self, filename):
-        print(f"Playing VLC file: {filename}")
 #Client Code 
 class AudioPlayer(MediaPlayer):
     def play(self, audio_type, filename):
